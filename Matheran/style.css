@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+h1 {
+    font-family: "Playfair Display", serif;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    overflow-x: hidden; /* Prevents side-scrolling on mobile */
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box; /* IMPORTANT: Keeps padding inside the width */
+}
+
+nav div {
+    height: 100px;
+    background-color: rgb(65, 163, 35);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+}
+
+h1 {
+    color: #ffffff;
+    font-size: 45px;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+}
+
+a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 20px;
+}
+
+.hero {
+    height: 100vh;
+    background-image: url(landing.avif);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+}
+
+.hero h1 {
+    font-size: 70px;
+    padding-left: 200px;
+}
+
+.hero p {
+    font-size: 22px;
+    padding-left: 200px;
+}
+
+.hero-btn {
+    display: inline-block;
+    margin-top: 12px;
+    margin-left: 200px;
+    padding: 14px 25px;
+    font-weight: 600;
+    border-radius: 50px;
+    text-decoration: none;
+    background: linear-gradient(45deg, #2ecc71, #27ae60);
+    color: white;
+    transition: all 0.3s ease;  
+}
+
+.hero-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.footer {
+    background-color: rgb(65, 163, 35);
+    padding: 20px 0;
+}
+
+.footer-bottom {
+    text-align: center;
+}
+
+.footer-bottom p {
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+/* --- ONLY CHANGES FOR MOBILE --- */
+@media (max-width: 800px) {
+    nav div {
+        height: auto;
+        flex-direction: column;
+        padding: 20px;
+    }
+    
+    ul {
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    /* This part fixes the text moving left/disappearing */
+    .hero h1, .hero p {
+        padding-left: 20px; /* Reduces 200px to 20px only on small screens */
+        padding-right: 20px;
+        font-size: 35px; /* Makes text fit phone screen */
+    }
+    
+    .hero p {
+        font-size: 16px;
+    }
+
+    .hero-btn {
+        margin-left: 20px; /* Match the text padding */
+    }
+}
